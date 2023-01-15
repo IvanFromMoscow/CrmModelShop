@@ -36,6 +36,7 @@ namespace CrmUi
         {
             var catalogCustomer = new Catalog<Customer>(db.Customers);
             catalogCustomer.Show();
+
         }
 
         private void CheckToolStripMenuItem_Click(object sender, EventArgs e)
