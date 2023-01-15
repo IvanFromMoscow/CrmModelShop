@@ -11,31 +11,31 @@ using System.Windows.Forms;
 
 namespace CrmUi
 {
-    public partial class CustomerForm : Form
+    public partial class SellerForm : Form
     {
-        public Customer Customer { get; set; }
-        public CustomerForm()
+        public Seller Seller { get; set; }
+        public SellerForm()
         {
             InitializeComponent();
         }
 
-        public CustomerForm(Customer customer) 
+        public SellerForm(Seller seller)
             : this()
         {
-            Customer = customer;
-            txtCustomerName.Text = customer.Name; 
+            Seller = seller;
+            txtSellerName.Text = seller.Name;
         }
 
-        private void CustomerForm_Load(object sender, EventArgs e)
+        private void SellerForm_Load(object sender, EventArgs e)
         {
-           
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Customer c = Customer ?? new Customer();
-            c.Name = this.txtCustomerName.Text;
-            Customer = c;
+            Seller s = Seller ?? new Seller();
+            s.Name = this.txtSellerName.Text;
+            Seller = s;
             Close();
         }
     }
